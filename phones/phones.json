@@ -1,0 +1,167 @@
+[
+    {
+        "age": 0, 
+        "id": "motorola-xoom-with-wi-fi", 
+        "imageUrl": "img/phones/motorola-xoom-with-wi-fi.0.jpg", 
+        "name": "Motorola XOOM\u2122", 
+        "price": "179,69 €",
+        "snippet": "Motorola XOOM with Wi-Fi and Android 3.0."
+    }, 
+    {
+        "age": 1, 
+        "id": "motorola-xoom", 
+        "imageUrl": "img/phones/motorola-xoom.0.jpg", 
+        "name": "MOTOROLA XOOM\u2122", 
+        "price": "300,00 €",
+        "snippet": "MOTOROLA XOOM with Android 3.0."
+    }, 
+    {
+        "age": 2, 
+        "carrier": "AT&amp;T", 
+        "id": "motorola-atrix-4g", 
+        "imageUrl": "img/phones/motorola-atrix-4g.0.jpg", 
+        "name": "MOTOROLA ATRIX\u2122 4G", 
+        "price": "299,99 €",
+        "snippet": "MOTOROLA ATRIX 4G the world's most powerful smartphone."
+    }, 
+    {
+        "age": 3, 
+        "id": "dell-streak-7", 
+        "imageUrl": "img/phones/dell-streak-7.0.jpg", 
+        "name": "Dell Streak 7", 
+        "price": "479,59 €",
+        "snippet": "It\u2019s small enough to carry around, big enough to gather around."
+    }, 
+    {
+        "age": 4, 
+        "carrier": "Cellular South", 
+        "id": "samsung-gem", 
+        "imageUrl": "img/phones/samsung-gem.0.jpg", 
+        "name": "Samsung Gem\u2122", 
+        "price": "350,69 €",
+        "snippet": "The Samsung Gem\u2122 more apps, more features and a more affordable price."
+    }, 
+    {
+        "age": 5, 
+        "carrier": "Dell", 
+        "id": "dell-venue", 
+        "imageUrl": "img/phones/dell-venue.0.jpg", 
+        "name": "Dell Venue", 
+        "price": "300,50 €",
+        "snippet": "The Dell Venue; Your Personal Express Lane to Everything"
+    }, 
+    {
+        "age": 6, 
+        "carrier": "Best Buy", 
+        "id": "nexus-s", 
+        "imageUrl": "img/phones/nexus-s.0.jpg", 
+        "name": "Nexus S", 
+        "price": "400,00 €",
+        "snippet": "Nexus S is the first phone to run Gingerbread (Android 2.3), the fastest version of Android yet."
+    }, 
+    {
+        "age": 7, 
+        "carrier": "Cellular South", 
+        "id": "lg-axis", 
+        "imageUrl": "img/phones/lg-axis.0.jpg", 
+        "name": "LG Axis", 
+        "price": "189,69 €",
+        "snippet": "Android Powered, Google Maps Navigation, 5 Customizable Home Screens"
+    }, 
+    {
+        "age": 8, 
+        "id": "samsung-galaxy-tab", 
+        "imageUrl": "img/phones/samsung-galaxy-tab.0.jpg", 
+        "name": "Samsung Galaxy Tab\u2122", 
+        "price": "350,50 €",
+        "snippet": "The Samsung Galaxy Tab\u2122 ultra-mobile entertainment experience."
+    }, 
+    {
+        "age": 9, 
+        "carrier": "Cellular South", 
+        "id": "samsung-showcase-a-galaxy-s-phone", 
+        "imageUrl": "img/phones/samsung-showcase-a-galaxy-s-phone.0.jpg", 
+        "name": "Samsung Galaxy S\u2122 ", 
+        "price": "400,69 €",
+        "snippet": "The Samsung Showcase\u2122 cinema quality experience like you\u2019ve never seen before."
+    }, 
+    {
+        "age": 10, 
+        "carrier": "Verizon", 
+        "id": "droid-2-global-by-motorola", 
+        "imageUrl": "img/phones/droid-2-global-by-motorola.0.jpg", 
+        "name": "DROID\u2122 2 Global by Motorola",
+        "price": "234,69 €",
+        "snippet": "The first smartphone with a 1.2 GHz processor and global capabilities."
+    }, 
+    {
+        "age": 11, 
+        "carrier": "Verizon", 
+        "id": "droid-pro-by-motorola", 
+        "imageUrl": "img/phones/droid-pro-by-motorola.0.jpg", 
+        "name": "DROID\u2122 Pro by Motorola", 
+        "price": "243,34 €",
+        "snippet": "The next generation of DOES."
+    }, 
+    {
+        "age": 12, 
+        "carrier": "AT&amp;T", 
+        "id": "motorola-bravo-with-motoblur", 
+        "imageUrl": "img/phones/motorola-bravo-with-motoblur.0.jpg", 
+        "name": "MOTOROLA BRAVO\u2122", 
+        "price": "234,23 €",
+        "snippet": "An experience to cheer about."
+    }, 
+    {
+        "age": 13, 
+        "carrier": "T-Mobile", 
+        "id": "motorola-defy-with-motoblur", 
+        "imageUrl": "img/phones/motorola-defy-with-motoblur.0.jpg", 
+        "name": "Motorola DEFY\u2122", 
+        "price": "354,69 €",
+        "snippet": "Are you ready for everything life throws your way?"
+    }, 
+    {
+        "age": 14, 
+        "carrier": "T-Mobile", 
+        "id": "t-mobile-mytouch-4g", 
+        "imageUrl": "img/phones/t-mobile-mytouch-4g.0.jpg", 
+        "name": "T-Mobile myTouch 4G", 
+        "price": "546,69 €",
+        "snippet": "The T-Mobile myTouch 4G is a premium smartphone designed to deliver blazing fast 4G speeds with or without Wi-Fi."
+    }, 
+    {
+        "age": 15, 
+        "carrier": "US Cellular", 
+        "id": "samsung-mesmerize-a-galaxy-s-phone", 
+        "imageUrl": "img/phones/samsung-mesmerize-a-galaxy-s-phone.0.jpg", 
+        "name": "Samsung Mesmerize\u2122", 
+        "price": "453,69 €",
+        "snippet": "The Samsung Mesmerize\u2122 delivers a cinema quality experience like you\u2019ve never seen before."
+    }, 
+    {
+        "age": 16, 
+        "carrier": "Sprint", 
+        "id": "sanyo-zio", 
+        "imageUrl": "img/phones/sanyo-zio.0.jpg", 
+        "name": "SANYO ZIO", 
+        "price": "300,69 €",
+        "snippet": "The Sanyo Zio by Kyocera combination of ultra-sleek styling, strong performance and unprecedented value."
+    }, 
+    {
+        "age": 17, 
+        "id": "t-mobile-g2", 
+        "imageUrl": "img/phones/t-mobile-g2.0.jpg", 
+        "name": "T-Mobile G2", 
+        "price": "354,45 €",
+        "snippet": "The T-Mobile G2 with Google is the first smartphone built for 4G speeds on T-Mobile's new network."
+    }, 
+    {
+        "age": 18, 
+        "id": "motorola-charm-with-motoblur", 
+        "imageUrl": "img/phones/motorola-charm-with-motoblur.0.jpg", 
+        "name": "Motorola CHARM\u2122", 
+        "price": "325,00 €",
+        "snippet": "Motorola CHARM fits easily in your pocket or palm."
+    }
+]

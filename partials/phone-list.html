@@ -1,0 +1,24 @@
+ <div id="phone_list" data-role="page" >
+        <div data-role="header" data-theme="b">
+            <h1>Phonecat</h1>
+        </div>  
+        
+        <div data-role="content">
+            
+        <input type="search" ng-model="query">
+        <select ng-model="orderProp">
+          <option value="name">Alphabetical</option>
+          <option value="age">Newest</option>
+        </select>
+            
+        <ul data-role="listview" data-inset="true">
+          <li ng-repeat="phone in phones | filter:query | orderBy:orderProp" >
+            <a href="#/phones/{{phone.id}}" > 
+            <img ng-src="{{phone.imageUrl}}">
+            <h2 href="#/phones/{{phone.id}}">{{phone.name}}</h2>
+            <p>{{phone.snippet}}</p></a>
+          </li>
+        </ul>
+    </div>
+        
+    </div>

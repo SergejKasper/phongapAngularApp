@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="de" ng-app="angulargap">
+
+<head>
+    <meta charset="utf-8">
+    <title>Google Phone Gallery</title>
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!-- Zahlen die wie Telephonnummern aussehen sollen nicht als Telephonnummer angezeigt werden -->
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.0-alpha.2.css">
+    <script type="text/javascript" charset="utf-8" src="cordova-2.7.0.js"></script>
+    <script src="lib/jquery/jquery-1.10.2.min.js"></script>
+    <script src="lib/jquerymobile/jquery.mobile-1.4.0-alpha.2.min.js"></script>
+    <script src="js/index.js"></script>
+    <script src="lib/angular/angular.min.js"></script>
+    <script src="lib/angular/angular-resource.min.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/services.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+        </script>
+</head>
+
+<body ng-controller="PhoneListCtrl" >
+
+    <div id="phone_list" data-role="page">
+        <div data-role="header" data-theme="b" data-position="fixed">
+            <h1>Phonecat</h1>
+        </div>
+
+        <div data-role="content">
+
+            <input type="search" ng-model="query">
+            <select ng-model="orderProp">
+                <option value="name">Alphabetical</option>
+                <option value="age">Newest</option>
+                <option value="price">Price</option>
+            </select>
+
+            <ul data-role="listview" data-inset="true">
+                <li ng-repeat="phone in phones | filter:query | startFrom:currentPage*pageSize | orderBy:orderProp | limitTo:pageSize">
+                    <a href="#phone_detail" data-transition="slide" ng-click="newPage(phone.id)">
+                        <img ng-src="{{phone.imageUrl}}">
+                        <h2>{{phone.name}}</h2>
+                        <p>{{phone.snippet}}</p>
+                        <p class="ui-li-aside price">{{phone.price}}</p>
+                    </a>
+                </li>
+            </ul>
+            <div data-role="controlgroup" data-type="horizontal" class="center-wrapper">
+                <button data-theme="b" data-icon="arrow-l" ng-disabled="currentPage == 0" ng-click="currentPage=currentPage-1">Back</button>
+                <a data-theme="b" data-role="button">{{currentPage +1}}/{{numberOfPages()}}</a>
+                <button data-theme="b" data-icon="arrow-r" data-iconpos="right" ng-disabled="currentPage >= phones.length/pageSize - 1" ng-click="currentPage=currentPage+1">Next</button>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="phone_detail" data-role="page" ng-controller="MainCtrl">
+        <div data-role="header" data-theme="b" data-position="fixed">
+            <a href="#" data-icon="arrow-l" data-rel="back" title="Back">Back</a>
+            <h1>Phonecat</h1>
+            <a href="#" data-icon="check" title="Back" ng-click="showAlert()">Buy</a>
+        </div>
+        <div data-role="content">
+
+            <h1>{{phone.name}}</h1>
+
+            <img ng-src="{{mainImageUrl}}" class="phoneStyle">
+
+
+            <textarea disabled="disabled" cols="30" rows="5" name="textarea-18" id="textarea-18">{{phone.description}}</textarea>
+
+            <ul class="phone-thumbs">
+                <li ng-repeat="img in phone.images">
+                    <img ng-src="{{img}}" ng-click="setImage(img)">
+                </li>
+            </ul>
+
+            <ul class="specs">
+                <li>
+                    <span>Availability and Networks</span>
+                    <dl>
+                        <dt>Availability</dt>
+                        <dd ng-repeat="availability in phone.availability">{{availability}}</dd>
+                    </dl>
+                </li>
+                <li>
+                    <span>Battery</span>
+                    <dl>
+                        <dt>Type</dt>
+                        <dd>{{phone.battery.type}}</dd>
+                        <dt>Talk Time</dt>
+                        <dd>{{phone.battery.talkTime}}</dd>
+                        <dt>Standby time (max)</dt>
+                        <dd>{{phone.battery.standbyTime}}</dd>
+                    </dl>
+                </li>
+                <li>
+                    <span>Storage and Memory</span>
+                    <dl>
+                        <dt>RAM</dt>
+                        <dd>{{phone.storage.ram}}</dd>
+                        <dt>Internal Storage</dt>
+                        <dd>{{phone.storage.flash}}</dd>
+                    </dl>
+                </li>
+                <li>
+                    <span>Connectivity</span>
+                    <dl>
+                        <dt>Network Support</dt>
+                        <dd>{{phone.connectivity.cell}}</dd>
+                        <dt>WiFi</dt>
+                        <dd>{{phone.connectivity.wifi}}</dd>
+                        <dt>Bluetooth</dt>
+                        <dd>{{phone.connectivity.bluetooth}}</dd>
+                        <dt>Infrared</dt>
+                        <dd>{{phone.connectivity.infrared}}</dd>
+                        <dt>GPS</dt>
+                        <dd>{{phone.connectivity.gps}}</dd>
+                    </dl>
+                </li>
+                <li>
+                    <span>Android</span>
+                    <dl>
+                        <dt>OS Version</dt>
+                        <dd>{{phone.android.os}}</dd>
+                        <dt>UI</dt>
+                        <dd>{{phone.android.ui}}</dd>
+                    </dl>
+                </li>
+                <li>
+                    <span>Size and Weigth</span>
+                    <dl>
+                        <dt>Dimensions</dt>
+                        <dd ng-repeat="dim in phone.sizeAndWeight.dimensions">{{dim}}</dd>
+                        <dt>Weight</dt>
+                        <dd>{{phone.sizeAndWeight.weight}}</dd>
+                    </dl>
+                </li>
+                <li>
+                    <span>Display</span>
+                    <dl>
+                        <dt>Screen size</dt>
+                        <dd>{{phone.display.screenSize}}</dd>
+                        <dt>Screen resolution</dt>
+                        <dd>{{phone.display.screenResolution}}</dd>
+                        <dt>Touch screen</dt>
+                        <dd>{{phone.display.touchScreen}}</dd>
+                    </dl>
+                </li>
+                <li>
+                    <span>Hardware</span>
+                    <dl>
+                        <dt>CPU</dt>
+                        <dd>{{phone.hardware.cpu}}</dd>
+                        <dt>USB</dt>
+                        <dd>{{phone.hardware.usb}}</dd>
+                        <dt>Audio / headphone jack</dt>
+                        <dd>{{phone.hardware.audioJack}}</dd>
+                        <dt>FM Radio</dt>
+                        <dd>{{phone.hardware.fmRadio}}</dd>
+                        <dt>Accelerometer</dt>
+                        <dd>{{phone.hardware.accelerometer}}</dd>
+                    </dl>
+                </li>
+                <li>
+                    <span>Camera</span>
+                    <dl>
+                        <dt>Primary</dt>
+                        <dd>{{phone.camera.primary}}</dd>
+                        <dt>Features</dt>
+                        <dd>{{phone.camera.features.join(', ')}}</dd>
+                    </dl>
+                </li>
+                <li>
+                    <span>Additional Features</span>
+                    <dd>{{phone.additionalFeatures}}</dd>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
